@@ -8,11 +8,25 @@
       <link rel="stylesheet" href="styles.css"/>
     </head>
     <body>
-        <label for="">Contraseña</label>
-        <input type="text" id="campoTXT"/>
+      <div class="main">
+        <div>
+          <label for="usuarioTxt">Usuario</label>
+          <input type="text" id="usuarioTxt" />
+        </div>
+        <div>
+          <label for="contraseniaTxt">Contraseña</label>
+          <input type="text" id="contraseniaTxt" />
+        </div>
 
-        <button onclick="imprimirTexto()">Click</button> 
-        <button onclick="borrarTexto()">Borrar</button>
+        <div>
+          <button onclick="iniciarSesion()">Iniciar Sesion</button>
+        </div>
+        <div>
+          <button onclick="registro()">Registrarme</button>
+        </div>
+      </div>
+
+      <p></p>
     </body>
 
     <script src="script.js"></script>
