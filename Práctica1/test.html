@@ -1,6 +1,9 @@
  <!DOCTYPE html>
  <html lang="en">
     <head>
+      <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+      <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -8,25 +11,26 @@
       <link rel="stylesheet" href="styles.css"/>
     </head>
     <body>
-      <div class="main">
-        <div>
-          <label for="usuarioTxt">Usuario</label>
-          <input type="text" id="usuarioTxt" />
-        </div>
-        <div>
-          <label for="contraseniaTxt">Contraseña</label>
-          <input type="text" id="contraseniaTxt" />
-        </div>
-
-        <div>
-          <button onclick="iniciarSesion()">Iniciar Sesion</button>
-        </div>
-        <div>
-          <button onclick="registro()">Registrarme</button>
-        </div>
-      </div>
-
-      <p></p>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Compra</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list [inset]="true">
+          <ion-item class="row">
+            <ion-input id="artIn" label="Artículo:" placeholder="Nombre del artículo"></ion-input>
+          </ion-item>
+          <ion-item class="row">
+            <ion-input id="monIn" label="Monto:" type="number" placeholder="0.00"></ion-input>
+          </ion-item>
+          <ion-item class="row">
+            <ion-button expand="block" onclick="calcularTotal()">Calcular Total</ion-button>
+          </ion-item>
+          <ul id="listaTicket"></ul>
+          <p>Total:</p>
+        </ion-list>
+      </ion-content>
     </body>
 
     <script src="script.js"></script>
